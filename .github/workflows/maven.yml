@@ -32,13 +32,12 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    - name: Build Java application 
+    - name: Build Java application(Maven)
       run: | 
-        npm install
-        npm run build --if-present
+        mvn clear install
 
-    - name: Test Java application 
-      run: npm test
+    - name: Test Java application(Maven)
+      run: mvn test
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
