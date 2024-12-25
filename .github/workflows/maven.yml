@@ -34,7 +34,7 @@ jobs:
 
     - name: Build Java application(Maven)
       run: | 
-        mvn clear install
+        mvn clean install
 
     - name: Test Java application(Maven)
       run: mvn test
